@@ -1,7 +1,7 @@
 
 node(){
     stage('calling ./kernel-version.sh') {
-            'pwd'
+            'sh pwd'
         'sh  kernel-version.sh'
     }
 }
