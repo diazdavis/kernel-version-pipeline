@@ -1,5 +1,5 @@
 node(){
     stage('Creating File') {
-        ./kernel-version.sh
+        "./kernel-version.sh"
     }
 }
