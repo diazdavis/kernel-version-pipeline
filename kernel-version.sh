@@ -1,2 +1,2 @@
 uname -a > kernelversion.txt
-cat kernelversion.txt
+cat kernel-version.txt
