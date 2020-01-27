@@ -3,6 +3,7 @@
 
 node(){
     stage('Creating File') {
-       sh ' ./kernel-version.sh'
+        'chmod 777 kernel-version.txt'
+       ' ./kernel-version.sh'
     }
 }
