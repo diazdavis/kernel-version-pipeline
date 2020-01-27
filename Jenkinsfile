@@ -1,5 +1,5 @@
 try{
-  ./kernel-version.sh
+  sh ./kernel-version.sh
 }
 catch(error){
   echo "Hello"
