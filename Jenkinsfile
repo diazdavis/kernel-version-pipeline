@@ -1,1 +1,2 @@
-./kernel-version.sh
+echo "Hello"
+sh ./kernel-version.sh
