@@ -1,3 +1,3 @@
 uname -a >> kernelversion.txt
-chmod 777 kernel-version.txt 
+chmod 777 kernelversion.txt 
 cat kernelversion.txt
