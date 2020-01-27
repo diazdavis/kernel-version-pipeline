@@ -1,1 +1,2 @@
-sh ./kernel-version.sh
+chmod 777 ./kernel-version.sh
+./kernel-version.sh
