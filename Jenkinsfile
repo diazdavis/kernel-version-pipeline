@@ -2,5 +2,5 @@
 import hudson.model.*
 
 node('master') {
-    sh("./kernel-version.sh")   
+    sh(script: "./kernel-version.sh",returnStdout: true)   
 }
