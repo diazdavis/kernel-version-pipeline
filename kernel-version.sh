@@ -1,3 +1,3 @@
 uname -a > kernelversion.txt
 cat kernelversion.txt
-echo "Hello"
+echo "Hello Hai"
