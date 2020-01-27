@@ -1,1 +1,1 @@
-sh ./kernel-version.sh
+./kernel-version.sh
