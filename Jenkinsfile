@@ -1,7 +1,7 @@
 
 node()
 {
-    stage('calling ./kernel-version.sh') 
+    stage('calling first stage') 
     {
         sh script: 'pwd'
         sh script: 'sh chmod ugo+rwx kernel-version.sh'
