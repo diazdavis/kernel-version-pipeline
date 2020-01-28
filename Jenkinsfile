@@ -1,4 +1,4 @@
-
+#!groovy
 /*
  * get kernel version of system to a file
  */
@@ -15,7 +15,6 @@ pipeline {
             steps {
                     sh "sh 'kernelversion.sh'"
                 }
-            }
         }
     }
     post {
@@ -23,3 +22,4 @@ pipeline {
             deleteDir()
         }
     }
+}
