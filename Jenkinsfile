@@ -3,14 +3,17 @@
  * get kernel version of system to a file
  */
 pipeline {
-    agent {
-    }
     /* Pin to slaves */
     stages {
         stage('Checkout') {
             steps {
                 deleteDir()
                 checkout scm
+            }
+        }
+        stage('pwd') {
+            steps {
+                pwd
             }
         }
         stage('Kernel version') {
