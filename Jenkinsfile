@@ -3,7 +3,11 @@
  * get kernel version of system to a file
  */
 pipeline {
-    /* Pin to slaves */
+    agent {
+        node {
+            label 'master'
+        }
+    }
     stages {
         stage('Checkout') {
             steps {
