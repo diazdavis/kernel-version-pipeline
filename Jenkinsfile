@@ -1,17 +1,27 @@
 
-node()
-{
-     stages {
+#!groovy
+/*
+ * get kernel version of system to a file
+ */
+pipeline {
+    /* Pin to slaves */
+    stages {
         stage('Checkout') {
             steps {
                 deleteDir()
                 checkout scm
             }
         }
-        stage('calling first stage') 
-        {
-            sh script: 'pwd'
-            sh script: 'sh kernelversion.sh'
+        stage('Kernel version') {
+            steps {
+                    sh "sh 'kernelversion.sh'"
+                }
+            }
         }
-      }
+    }
+    post {
+        always {
+            deleteDir()
+        }
+    }
 }
