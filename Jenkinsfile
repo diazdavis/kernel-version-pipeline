@@ -4,9 +4,6 @@
  */
 pipeline {
     agent {
-        node {
-            label 'slave'
-        }
     }
     /* Pin to slaves */
     stages {
