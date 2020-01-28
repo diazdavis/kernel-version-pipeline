@@ -15,11 +15,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('pwd') {
-            steps {
-                pwd
-            }
-        }
         stage('Kernel version') {
             steps {
                     sh "sh 'kernelversion.sh'"
