@@ -5,5 +5,6 @@ node()
     {
         sh script: 'pwd'
         sh script: './kernelversion.sh'
+        sh script: 'pwd'
     }
 }
