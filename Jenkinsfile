@@ -3,11 +3,7 @@
  * get kernel version of system to a file
  */
 pipeline {
-    agent {
-        node {
-            label 'master'
-        }
-    }
+    agent any
     stages {
         stage('Checkout') {
             steps {
