@@ -1,5 +1,4 @@
 
-#!groovy
 /*
  * get kernel version of system to a file
  */
