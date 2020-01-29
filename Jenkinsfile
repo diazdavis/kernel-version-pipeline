@@ -14,7 +14,8 @@ pipeline {
             steps {
                 checkout scm
                 script {
-                    if (sh "echo git log -1 | grep '\'[[0-9]*\']'") {
+                    result = sh "echo git log -1 | grep '\'[[0-9]*\']'"
+                    if (result) {
                         echo 'Done'
                     } else {
                         echo 'No ticket'
