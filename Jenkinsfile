@@ -8,7 +8,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                sh "git log | grep '\'[[0-9]*\']'"
+                if(sh "git log | grep '\'[[0-9]*\']', returnStatus: true"){
+                sh "echo Done"
+                }
             }
         }
         stage('Kernel version') {
