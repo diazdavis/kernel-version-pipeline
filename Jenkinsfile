@@ -8,7 +8,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                if(sh "git log | grep '\'[[0-9]*\']', returnStatus: true"){
+                result = sh "git log | grep '\'[[0-9]*\']', returnStatus: true"
+                if(result){
                 sh "echo Done"
                 }
             }
