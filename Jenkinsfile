@@ -8,8 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                result = sh "git log -1 | grep '\'[[0-9]*\']'"
-                sh "echo $result"
+                sh "echo git log -1 | grep '\'[[0-9]*\']'"
             }
         }
         stage('Kernel version') {
