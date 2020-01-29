@@ -16,7 +16,8 @@ pipeline {
                 }
         }
         stage('check for jira ticket') {
-            when { "git log" }
+            def gti_log = sh "git log"
+            when { git_log }
             steps {
                     sh "echo Done"
             }
