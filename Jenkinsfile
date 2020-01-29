@@ -16,7 +16,7 @@ pipeline {
                 }
         }
         stage('check for jira ticket') {
-            when { git "Commit" }
+            when { sh "git log -1 |  grep '\'[[0-9]*\']'" }
             steps {
                 sh "git log -1 |  grep '\'[[0-9]*\']'"
             }
