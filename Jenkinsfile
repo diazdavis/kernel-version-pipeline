@@ -17,8 +17,9 @@ pipeline {
         }
         stage('check for jira ticket') {
             steps {
+                checkout scm
                 script {
-                    result = sh "echo git log -1 | grep '\'[[0-9]*\']'"
+                    sh "echo git log -1 | grep '\'[[0-9]*\']'"
                 }
             }
          }
