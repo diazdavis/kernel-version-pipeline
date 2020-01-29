@@ -10,14 +10,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Getting Jira ticket from git log) {
-              step {
-                  checkout scm
-                    if (sh "git log | grep '\\[[0-9]*\\]'", returnStatus: true){
-                    sh "echo Done"
-                    }
-                }
-              }
         stage('Kernel version') {
             steps {
                     sh "sh 'kernelversion.sh'"
