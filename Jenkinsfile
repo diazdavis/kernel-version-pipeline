@@ -17,7 +17,7 @@ pipeline {
         }
         stage('check for jira ticket') {
             steps {
-                if (!("git log")) then sh "echo 'No Jira token'";
+                if (!("git log -1")); then sh "echo 'No Jira token'";
                 sh "git log -1 |  grep '\'[[0-9]*\']'"
             }
          }
