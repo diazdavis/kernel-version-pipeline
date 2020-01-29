@@ -19,7 +19,6 @@ pipeline {
             steps {
                 script {
                     result = sh "echo git log -1 | grep '\'[[0-9]*\']'"
-                    sh "echo $result"
                 }
             }
          }
