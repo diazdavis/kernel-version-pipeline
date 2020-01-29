@@ -12,7 +12,8 @@ pipeline {
         }
         stage('Getting Jira ticket from git log){
               step{
-                if (sh "git log -1 | grep '\\[[0-9]*\\]'", returnStatus: true){
+                  checkout scm
+                    if (sh "git log | grep '\\[[0-9]*\\]'", returnStatus: true){
                     sh "echo Done"
                     }
                 }
