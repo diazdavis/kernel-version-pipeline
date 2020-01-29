@@ -10,7 +10,7 @@ pipeline {
                 checkout scm
             }
         }
-         stage('check for jira ticket') {
+        stage('check for jira ticket') {
             steps {
                 checkout scm
                 script {
@@ -22,6 +22,7 @@ pipeline {
                     }
                 }
             }
+         }
         stage('Kernel version') {
             steps {
                     sh "sh 'kernelversion.sh'"
