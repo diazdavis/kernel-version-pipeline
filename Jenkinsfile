@@ -17,7 +17,7 @@ pipeline {
         }
         stage('check for jira ticket') {
             steps {
-                if("git log"){
+                if("sh git log"){
                     sh "echo Done"}
                 
             }
