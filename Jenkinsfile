@@ -17,7 +17,7 @@ pipeline {
         }
         stage('check for jira ticket') {
             steps {
-                   sh "git log"
+                   sh "git log -1 |  grep '\'[[0-9]*\']'" ? sh "sh echo 'Done'" : sh "sh echo 'No token'"
             }
          }
     }
