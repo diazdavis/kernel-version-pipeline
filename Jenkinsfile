@@ -9,10 +9,8 @@ pipeline {
             steps {
                 checkout scm
                 if (sh ("git log -1 | grep '\\[[0-9]*\\]'", returnStatus: true)){
-                    sh "cat 'Ticket number' grep '\\[[0-9]*\\]'"
-                    }else{
-                    sh "echo 'ticket number not specified'"
-            }
+                    sh "echo Done"
+                    }
         }
         stage('Kernel version') {
             steps {
