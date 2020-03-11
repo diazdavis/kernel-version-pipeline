@@ -58,12 +58,12 @@ pipeline {
                                 sh "terraform init"
                                 script{
                                     if (params.CHOICES == 'plan'){
-                                        sh "echo terraform ${params.CHOICES} in action"
+                                        sh "echo terraform 'params.CHOICES' in action"
                                         sh "ls -l"
                                         // sh "terraform apply -auto-approve"
                                     }
                                     else{
-                                        sh "echo terraform ${params.CHOICES} in action"
+                                        sh "echo terraform 'params.CHOICES' in action"
                                         // sh "terraform plan"
                                     }
                                 }
