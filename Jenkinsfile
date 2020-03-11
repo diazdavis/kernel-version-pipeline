@@ -25,7 +25,6 @@ pipeline {
         disableConcurrentBuilds()
         skipStagesAfterUnstable()
         timestamps()
-        ansiColor('xterm')
     }
 
     stages {
