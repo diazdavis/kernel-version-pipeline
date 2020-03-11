@@ -45,7 +45,6 @@ pipeline {
        
         stage('${params.CHOICES} terraform') {
                     steps {
-                            sh "cd '$WORKSPACE/terraform/jenkins-infra'"
                             dir("/terraform/jenkins-infra"){
                                 sh "terraform init"
                                 script{
