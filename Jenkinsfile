@@ -46,20 +46,16 @@ pipeline {
 
         stage('AWS Configure') {
             steps {
-                {
                     sh "export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
                     sh "export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
                     sh "export AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}"
-                }
             }
         }
 
         stage('Clone jenkins terraform') {
             steps {
-                {
                     sh "mkdir -p jenkins-infra"
                     sh "git clone git@bitbucket.org:keyvaluesoftwaresystems/infra.git /terraform/jenkins-infra/"
-                }
             }
         }
 
