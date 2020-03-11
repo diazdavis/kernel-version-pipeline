@@ -65,7 +65,7 @@ pipeline {
                             sh "cd '$WORKSPACE/terraform/jenkins-infra'"
                             sh "terraform init"
                             script{
-                                if (${params.CHOICES}=plan){
+                                if (${params.CHOICES} == plan){
                                     sh "echo terraform ${params.CHOICES} in action"
                                     //sh "terraform apply -auto-approve"
                                 }
