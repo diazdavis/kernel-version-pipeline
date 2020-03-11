@@ -44,7 +44,7 @@ pipeline {
         stage('${params.CHOICES} terraform') {
                     steps {
                             script{
-                                if (${params.CHOICES} == plan){
+                                if (params.CHOICES == plan){
                                     sh "echo terraform ${params.CHOICES} in action"
                                     //sh "terraform apply -auto-approve"
                                 }
