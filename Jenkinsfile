@@ -18,7 +18,7 @@ pipeline {
         password(name: 'AWS_ACCESS_KEY_ID', description: 'Enter AWS Access Key')
         password(name: 'AWS_SECRET_ACCESS_KEY', description: 'Enter AWS Secret Key')
         string(name: 'AWS_DEFAULT_REGION', defaultValue: 'ap-southeast-1', description: 'Enter AWS REGION')
-        choice(name: 'CHOICES', choices: ['plan', 'apply'], description: 'Always select plan before apply')
+        choice(name: 'CHOICES', choices: ['plan', 'apply'], defaultValue: 'plan', description: 'Always select plan before apply')
     }
 
     options {
