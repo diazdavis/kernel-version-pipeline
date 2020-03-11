@@ -42,15 +42,7 @@ pipeline {
                 checkout scm
             }
         }
-        
-        stage('Clone jenkins terraform') {
-            steps {
-                    sh "mkdir -p jenkins-infra"
-                    sh "git clone git@bitbucket.org:keyvaluesoftwaresystems/infra.git /terraform/jenkins-infra/"
-            }
-        }
-
-
+       
         stage('${params.CHOICES} terraform') {
                     steps {
                             sh "cd '$WORKSPACE/terraform/jenkins-infra'"
